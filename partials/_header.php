@@ -43,6 +43,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 </li>
                 <li>
                     <a class="text-light" href="blog.php<?php if($loggedin){echo'?uid='. $uid;} ?>">Blog</a>
+
+                </li>
+                <li>
+                    <a class="text-light" href="build_resume.php<?php if($loggedin){echo'?uid='. $uid;} ?>">Build Resume</a>
+                    
                 </li>
                 <li>
                     <a class="text-light" href="contact-us.php<?php if($loggedin){echo'?uid='. $uid;} ?>">Contact Us</a>

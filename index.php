@@ -113,13 +113,13 @@ if (isset($_SESSION['loggedin'])) {
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="d-flex align-items-center justify-content-center mb-2">
-                            <strong class="number" data-number="120">0</strong>
+                            <strong class="number" data-number="">0</strong>
                         </div>
                         <span class="caption">Jobs Filled</span>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="d-flex align-items-center justify-content-center mb-2">
-                            <strong class="number" data-number="550">0</strong>
+                            <strong class="number" data-number="">0</strong>
                         </div>
                         <span class="caption">Companies</span>
                     </div>';
@@ -161,7 +161,7 @@ if (isset($_SESSION['loggedin'])) {
                     $compname = $row['compname'];
                     echo '<ul class="job-listings mb-3">
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                <a href="job-single.php?jobno=' . $jobid . '&uid='.$uid.' "></a>
+                <a href="./job-single.php?uid' . $uid . '&jobno='.$jobno.' "></a>
                 <div class="job-listing-logo ">
                 <img src="./images/' . $logo . '"  alt="" class="img-fluid" height="100px" width="100px">
                 </div>
@@ -218,8 +218,7 @@ if (isset($_SESSION['loggedin'])) {
                     $compname = $row['compname'];
                     echo '<ul class="job-listings mb-3">
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                <a href="job-single.php?jobno=' . $jobid .'"></a>
-                <div class="job-listing-logo ">
+                <a href="job-single.php?jobno='.$jobid.'';if($loggedin){echo'&uid='.$uid.'';} echo'"></a>                <div class="job-listing-logo ">
                 <img src="./images/' . $logo . '"  alt="" class="img-fluid" height="100px" width="100px">
                 </div>
                 <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
