@@ -39,7 +39,7 @@ if($recloggedin==false)
                 </li>
                 <li >
                     <a class="text-light"
-                        href="applied.php<?php if($recloggedin){echo'?uid='. $uid;} ?>">Job-Applied</a>
+                        href="applied.php<?php if($recloggedin){echo'?uid='. $uid;} ?>">Applied-Candidates</a>
                 </li>
                
                 <li class="dropdown has-dropdown"><a class="text-light" href="#"><span>Reports</span> <i

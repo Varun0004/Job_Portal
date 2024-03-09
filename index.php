@@ -100,7 +100,15 @@ if (isset($_SESSION['loggedin'])) {
                             $totaljobs = "SELECT * FROM `post_job`";
                             $resultjob = mysqli_query($conn, $totaljobs);
                             $rowcountjob = mysqli_num_rows($resultjob);
-                            echo ' <strong class="number" data-number="' . $rowcountcand . '"></strong>
+                            $totalcomp = "SELECT * FROM `recruiter_signup`";
+                            $resultcomp = mysqli_query($conn, $totalcomp);
+                            $rowcountcomp = mysqli_num_rows($resultcomp);
+                            $totalapply = "SELECT * FROM `applyjob`";
+                            $resultapply = mysqli_query($conn, $totalapply);
+                            $rowcountapply = mysqli_num_rows($resultapply);
+                            
+                            echo '
+                             <strong class="number" data-number="' . $rowcountcand . '"></strong>
                         </div>
                         <span class="caption">Candidates</span>
                     </div>
@@ -113,13 +121,13 @@ if (isset($_SESSION['loggedin'])) {
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="d-flex align-items-center justify-content-center mb-2">
-                            <strong class="number" data-number="">0</strong>
+                            <strong class="number" data-number="'.$rowcountapply.'">0</strong>
                         </div>
                         <span class="caption">Jobs Filled</span>
                     </div>
                     <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
                         <div class="d-flex align-items-center justify-content-center mb-2">
-                            <strong class="number" data-number="">0</strong>
+                            <strong class="number" data-number="'.$rowcountcomp.'">0</strong>
                         </div>
                         <span class="caption">Companies</span>
                     </div>';

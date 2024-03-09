@@ -162,9 +162,12 @@ if($showError)
             <div class="form-floating mb-3">
                 <button type="submit" class="btn btn-primary mb-3"  id="btnLogin"  style="width: 178px">login</button> 
             </div>
+            <div class="text-center">
+               Forgot Password  <a class="text-primary" href="signup.php?click=<?php echo $click;?>" target="_self"><u>Click here</u></a>
+            </div>
             <!-- Register buttons -->
             <div class="text-center">
-              Don't have an account? <a href="signup.php?click=<?php echo $click;?>" target="_self">Sign up.</a>
+              Don't have an account? <a class="text-primary" href="signup.php?click=<?php echo $click;?>" target="_self">Sign up.</a>
             </div>
           </div>
         </div>

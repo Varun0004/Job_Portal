@@ -53,9 +53,7 @@ $uid=$_GET['uid'];
                     $phone=$row['phone'];
                     $experience=$row['experience'];
                     $about=$row['about'];
-
-
-                
+                    $jobtitle=$row['jobtitle'];
                 echo'<ul class="job-listings mb-3">
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
                 <a href="applied-single.php?uid='.$uid.'&aid='.$aid.'"></a>

@@ -99,7 +99,7 @@ if (isset($_SESSION['loggedin'])) {
                     <div class="col-lg-4">
                         <div class="row">
                             <div class="col-6">
-                                <a href="applyjob.php?job=<?php echo $jobid;?>&uid=<?php echo $uid;?>  &rid=<?php echo $rid;?>"   class="btn btn-block btn-primary btn-md">Apply Now</a>
+                                <a href="applyjob.php?job=<?php echo $jobid;?>&uid=<?php echo $uid;?>  &rid=<?php echo $rid; ?>&jobtitle=<?php echo $jobtitle;?>"   class="btn btn-block btn-primary btn-md">Apply Now</a>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@ if (isset($_SESSION['loggedin'])) {
                         </div>
                         <div class="row mb-5">
                             <div class="col-6">
-                                <a href="applyjob.php?job=<?php echo $jobid;?>&uid=<?php echo $uid;?> &rid=<?php echo $rid;?>" class="btn btn-block btn-primary btn-md">Apply Now</a>
+                                <a href="applyjob.php?job=<?php echo $jobid;?>&uid=<?php echo $uid;?> &rid=<?php echo $rid;?> &jobtitle=<?php echo $jobtitle;?>" class="btn btn-block btn-primary btn-md">Apply Now</a>
                             </div>
                         </div>
 

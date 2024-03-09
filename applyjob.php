@@ -4,7 +4,7 @@ $showError=false;
 $rid=$_GET['rid'];
 $jobid=$_GET['job'];
 $uid=$_GET['uid'];
-
+$jobtitle=$_GET['jobtitle'];
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
   include("partials/db_connect.php");
@@ -25,8 +25,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   }
   else
   {
-    $sql="INSERT INTO applyjob(`aid`,`rid`,`resume`,`name`, `gender`, `email`, `phone`, `experience`, `about`, `jobid`)
-     VALUES (NULL,'$rid','$filename', '$fname', '$gender', '$email', '$phone', '$experience', '$about','$jobid');";
+    $sql="INSERT INTO applyjob(`aid`,`rid`,`resume`,`name`, `gender`, `email`, `phone`, `experience`, `about`, `jobid`,`jobtitle`)
+     VALUES (NULL,'$rid','$filename', '$fname', '$gender', '$email', '$phone', '$experience', '$about','$jobid','$jobtitle');";
       $result=mysqli_query($conn, $sql);
     //  image
         move_uploaded_file($tempname, $folder);

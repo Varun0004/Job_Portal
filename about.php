@@ -25,25 +25,7 @@
 
 <body id="top">
 
-    <div id="overlayer"></div>
-    <div class="loader">
-        <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-
-
-    <div class="site-wrap">
-
-        <div class="site-mobile-menu site-navbar-target">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
-            </div>
-            <div class="site-mobile-menu-body"></div>
-        </div> <!-- .site-mobile-menu -->
-
+    
 
         <!-- NAVBAR -->
         <?php
@@ -89,33 +71,37 @@
                             $totaljobs = "SELECT * FROM `post_job`";
                             $resultjob = mysqli_query($conn, $totaljobs);
                             $rowcountjob = mysqli_num_rows( $resultjob );
+                            $totalcomp = "SELECT * FROM `recruiter_signup`";
+                            $resultcomp = mysqli_query($conn, $totalcomp);
+                            $rowcountcomp = mysqli_num_rows($resultcomp);
+                            $totalapply = "SELECT * FROM `applyjob`";
+                            $resultapply = mysqli_query($conn, $totalapply);
+                            $rowcountapply = mysqli_num_rows($resultapply);
 
-                            echo' <strong class="number" data-number="'.$rowcountcand.'"></strong>
-                        
+                            echo' 
+                            <strong class="number" data-number="' . $rowcountcand . '"></strong>
+                            </div>
+                            <span class="caption">Candidates</span>
                         </div>
-                        <span class="caption">Candidates</span>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-                        <div class="d-flex align-items-center justify-content-center mb-2">
-                            <strong class="number" data-number="'.$rowcountjob.'">0</strong>
+    
+                        <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                <strong class="number" data-number="' . $rowcountjob . '">0</strong>
+                            </div>
+                            <span class="caption">Jobs Posted</span>
                         </div>
-                        <span class="caption">Jobs Posted</span>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-                        <div class="d-flex align-items-center justify-content-center mb-2">
-                            <strong class="number" data-number="120">0</strong>
+                        <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                <strong class="number" data-number="'.$rowcountapply.'">0</strong>
+                            </div>
+                            <span class="caption">Jobs Filled</span>
                         </div>
-                        <span class="caption">Jobs Filled</span>
-                    </div>
-
-                    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-                        <div class="d-flex align-items-center justify-content-center mb-2">
-                            <strong class="number" data-number="550">0</strong>
-                        </div>
-                        <span class="caption">Companies</span>
-                    </div>';
+                        <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                            <div class="d-flex align-items-center justify-content-center mb-2">
+                                <strong class="number" data-number="'.$rowcountcomp.'">0</strong>
+                            </div>
+                            <span class="caption">Companies</span>
+                        </div>';
                     ?>
 
 

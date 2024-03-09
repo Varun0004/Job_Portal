@@ -16,16 +16,15 @@
                     <li><a href="#">Graphic Design</a></li>
                     <li><a href="#">Web Developers</a></li>
                     <li><a href="#">Python</a></li>
-                    <li><a href="#">HTML5</a></li>
-                    <li><a href="#">CSS3</a></li>
+                   
                 </ul>
             </div>
             <div class="col-6 col-md-3 mb-4 mb-md-0">
                 <h3>Company</h3>
                 <ul class="list-unstyled">
-                    <li><a href="about.php">About Us</a></li>
-                    <li><a href="services.php">Career</a></li>
-                    <li><a href="blog.php">Blog</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Blog</a></li>
                     
                 </ul>
             </div>
@@ -50,7 +49,7 @@
 
         <div class="row text-center">
             <div class="col-12">
-                <p class="copyright"><small>
+                <p class="copyright"><small>Varun singh
                         Copyright &copy;
                         <script>
                         document.write(new Date().getFullYear());
