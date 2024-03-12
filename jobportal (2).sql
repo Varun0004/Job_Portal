@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2024 at 08:28 AM
+-- Generation Time: Mar 11, 2024 at 04:04 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -53,7 +53,7 @@ INSERT INTO `applyjob` (`aid`, `rid`, `resume`, `name`, `gender`, `email`, `phon
 (5, 4, 0x696e666f7379732e77656270, 'Varun Singh', 'Male', 'varun134657@gmail.com', '6006678296', '1 - 2 years', 'I am php developer has done multiple projects in php', 27, NULL, NULL),
 (6, 4, 0x696e666f7379732e77656270, 'Shubham Umbarkar', 'Male', 'shubham@gmail.com', '6006678288', '1 - 2 years', 'My name is shubham umbarkar and i am php developer', 27, NULL, NULL),
 (7, 3, 0x726573756d65202832292e706466, 'Varun Singh', 'Male', 'Varun123@gmail.com', '6006678297', 'Less than a year', '...................................', 30, 'Rejected', NULL),
-(8, 4, 0x43532053797374656d20436f6e74657874204446442e706466, 'Rahul Rajput', 'Male', 'rahul12@gmail.com', '600667829', '1 - 2 years', '...............................................................', 27, 'Rejected', 'PHP');
+(8, 4, 0x43532053797374656d20436f6e74657874204446442e706466, 'Rahul Rajput', 'Male', 'rahul12@gmail.com', '600667829', '1 - 2 years', '...............................................................', 27, NULL, 'PHP');
 
 -- --------------------------------------------------------
 
@@ -117,7 +117,7 @@ CREATE TABLE `candidate_signup` (
 --
 
 INSERT INTO `candidate_signup` (`sno`, `fname`, `lname`, `email`, `password`, `photo`, `phone`, `dob`, `about`, `street`, `city`, `state`, `zip`, `degreename`, `passingyear`, `university`, `grade`, `facebook`, `twitter`, `linkedin`, `instagram`) VALUES
-(1, 'Varun Singh', '', 'varun134657@gmail.com', '$2y$10$oCQGa4ytNm9PBfZzx7bKgulOUtG7/reXVhBlhJDVAyB4rprHVr2wK', 0x7369782e6a7067, '6006678296', '09-04-2003', 'i am varun and i am php developer', 'Galak', 'Jammu', 'J&k', 114455, 'BCA', '2022', 'Jammu University', 'A++', 'varun@fb.com', '', '', ''),
+(1, 'Varun Singh', '', 'varun134657@gmail.com', '$2y$10$oCQGa4ytNm9PBfZzx7bKgulOUtG7/reXVhBlhJDVAyB4rprHVr2wK', 0x646f776e6c6f6164202831292e706e67, '6006678296', '09-04-2003', 'i am varun and i am php developer', 'Galak', 'Jammu', 'J&k', 114455, 'BCA', '2022', 'Jammu University', 'A++', 'varun@fb.com', '', '', ''),
 (2, 'varun', 'singh', 'varun78296@gmail.com', '$2y$10$GvkSHj309fChNRY1T19ZrO7fVJ0l93NDzQQXFKLkjf3GWfCVsgUjK', '', '', '', '', '', '', '', 0, '', '', '', '', '', '', '', ''),
 (3, '', '', 'rahul@gmail.com', '$2y$10$NTTj0malMYUsqTTP60ZttuZJY9hUIBFlgOn/tBCpmMwm2cJ/g3XzS', 0x776970726f2e6a7067, '6006678296', '', '', '', '', '', 0, '', '', '', '', '', '', '', ''),
 (4, 'arun kumar', '', 'arun@gmail.com', '$2y$10$YL2dZ9odz5.YA1UbKVJyOOEQmuwd9v/3i6odK5qALGmmiIyH5GMWC', 0x646f776e6c6f61642e706e67, '6006678296', '09-04-2003', 'my name is arun ', '', '', '', 0, '', '', '', '', '', '', '', ''),

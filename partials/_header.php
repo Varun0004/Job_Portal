@@ -16,7 +16,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 ?>
 <header id="header" class=" header fixed-top d-flex align-items-center  ">
     <div class="container-fluid  d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
             <h3 class="text-light animated bounce infinite" alt="Transparent MDB Logo" id="animated-img1">JOBPORTAL</h3>
         </a>
         <!-- Nav Menu -->

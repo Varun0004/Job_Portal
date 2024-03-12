@@ -32,8 +32,8 @@
                 <h3>Support</h3>
                 <ul class="list-unstyled">
                     <li><a href="#">Support</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="privacy_policy.php">Privacy</a></li>
+                    <li><a href="./terms.php">Terms of Service</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md-3 mb-4 mb-md-0">

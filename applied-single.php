@@ -1,14 +1,15 @@
 <?php
 $aid=$_GET['aid'];
-$showAlert=false;
 $showError=false;
+$showError1=false;
+
 include'partials/db_connect.php';
 if (isset($_POST['accept'])) {
     $sql = " update applyjob set status='Approved' WHERE aid=$aid";
     $result = mysqli_query($conn, $sql);
     if($result)
     {
-            $showAlert;
+        $showError="Candidate Approved Sucessfully ";
     }
     
 
@@ -18,7 +19,7 @@ if (isset($_POST['reject'])) {
     $result = mysqli_query($conn, $sql);
     if($result)
     {
-            $showError="Candidate Rejected Sucessfully ";
+            $showError1="Candidate Rejected Sucessfully ";
     }
 
 }
@@ -90,21 +91,22 @@ if (isset($_POST['reject'])) {
             </div>
         </section>
         <?php
-          if($showAlert)
+        if($showError)
           {
           echo'
-            <div class="alert alert-success  fade show" role="alert">
-          <strong></strong> Approved Candidate Sucessfully
+            <div class="alert alert-primary  fade show" role="alert">
+          <strong> </strong>'.$showError.'
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>';
-        }
-        if($showError)
+        }?>
+        <?php
+        if($showError1)
           {
           echo'
             <div class="alert alert-danger  fade show" role="alert">
-          <strong> </strong>'.$showError.'
+          <strong> </strong>'.$showError1.'
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>

@@ -1,5 +1,10 @@
+<?php
+include'partials/db_connect.php';
+$uid=$_GET['uid'];
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +24,8 @@
 </head>
 
 <body>
+
+    <form action="" method="post">
     <div class="site-wrap">
         <?php include'partials/rec_header.php'?>
         <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');"
@@ -43,53 +50,50 @@
                         <tr>
                             <th scope="col">Sno.</th>
                             <th scope="col">Full Name</th>
-                            <th scope="col">Job Role</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Experience</th>
                             <th scope="col">Status</th>
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
+                        <?php
+                        include 'partials/db_connect.php';
+                        $sql = "SELECT * FROM `applyjob` where rid='$uid'";
+                        $result = mysqli_query($conn, $sql);
+                        $i=1;
+                        while ($row = mysqli_fetch_assoc($result)) 
+                        {
+                           
+                            $name = $row['name'];
+                            $email = $row['email'];
+                            $exp = $row['experience'];
+                            $status = $row['status'];
+
+                            echo'<tr>
+                                    
+                                    <td>'.$i.'</td>
+                                    <td>'.$name.'</td>
+                                    <td>'.$email.'</td>
+                                    <td>'.$exp.'</td>
+                                    <td>'.$status.'</td>
+                                </tr>';
+                                $i++;
+                        }
+
+                        ?>
+
                     </tbody>
                 </table>
+                &nbsp;
             </div>
+            <button  class="btn btn-danger mt-5"><a href="print.php?report=candidate&rid=<?php echo $uid;?>">Download pdf</a></button>
         </section>
+        </form>
         <?php include'partials/rec_footer.php'?>
     </div>
+   
+    
     <script src="js/loader.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -103,4 +107,6 @@
     <script src="js/bootstrap-select.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
+
+
 </html>
