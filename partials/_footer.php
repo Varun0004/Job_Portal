@@ -12,7 +12,7 @@
             <div class="col-6 col-md-3 mb-4 mb-md-0">
                 <h3>Search Trending</h3>
                 <ul class="list-unstyled">
-                    <li><a href="#">Web Design</a></li>
+                    <li><a href="">Web Design</a></li>
                     <li><a href="#">Graphic Design</a></li>
                     <li><a href="#">Web Developers</a></li>
                     <li><a href="#">Python</a></li>
@@ -31,7 +31,7 @@
             <div class="col-6 col-md-3 mb-4 mb-md-0">
                 <h3>Support</h3>
                 <ul class="list-unstyled">
-                    <li><a href="#">Support</a></li>
+                    <li><a href="contact-us.php">Support</a></li>
                     <li><a href="privacy_policy.php">Privacy</a></li>
                     <li><a href="./terms.php">Terms of Service</a></li>
                 </ul>

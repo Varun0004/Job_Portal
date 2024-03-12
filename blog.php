@@ -57,13 +57,13 @@
             while($row= mysqli_fetch_assoc($result))
             {
                 $id= $row['bid'];
+                $image = $row["blogimg"];
                 $title=$row['title'];
                 $date=$row['date'];
                 $image=$row['blogimg'];
                 echo'<div class="col-md-6 col-lg-4">
                         <a href="blog-single.php?bid='.$id.'&'; if($loggedin){echo'uid='. $uid;}
-                        
-                        echo'"><img src="images/sq_img_1.jpg" alt="Image" class="rounded mb-2"
+                        echo'"><img src="images/'.$image.'" alt="Image" class="rounded mb-2"
                                 width="350px"></a>
                         <h3><a href="blog-single.php?bid='.$id.'&'; if($loggedin){echo'uid='. $uid;}
                         echo'" class="text-black">'.$title.'</a>

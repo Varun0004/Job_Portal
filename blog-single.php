@@ -57,27 +57,6 @@ else
 
 
 <body id="top">
-
-    <div id="overlayer"></div>
-    <div class="loader">
-        <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-
-
-    <div class="site-wrap">
-
-        <div class="site-mobile-menu site-navbar-target">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
-            </div>
-            <div class="site-mobile-menu-body"></div>
-        </div> <!-- .site-mobile-menu -->
-
-
         <!-- NAVBAR -->
         <?php include'partials/_header.php';?>
         <?php 
@@ -87,6 +66,7 @@ else
             $result = mysqli_query($conn, $sql);
             while($row= mysqli_fetch_assoc($result))
             {
+                $image=$row['blogimg'];
                 $name= $row['a_name'];
                 $title=$row['title'];
                 $date=$row['date'];
@@ -147,7 +127,7 @@ else
                 <div class="row">
                     <div class="col-lg-8 blog-content">
                         <p class="lead"><?php echo substr($desc,0,200).'....';?></p>
-                        <p><img src="images/blog1.webp" alt="Image" width="750px" class=""></p>
+                        <p><img src="images/<?php echo $image;?>" alt="Image" width="750px" class=""></p>
                         <p><?php echo substr($desc,200);?></p>
                         <div class="pt-5">
 
@@ -165,8 +145,8 @@ else
                 $datetime= $row['date']; 
                echo' <ul class="comment-list">
                 <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/img1.png" alt="Image placeholder">
+                  <div class="vcard bio " >
+                    <img  src="images/img1.png" alt="Image placeholder">
                   </div>
                   <div class="comment-body">
                     <h3>'. $fname.'</h3>

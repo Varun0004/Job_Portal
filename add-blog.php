@@ -23,8 +23,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   }
   else
   {
-    $sql="INSERT INTO `blog` (`bid`, `title`, `date`, `des`, `a_name`, `a_about`) 
-    VALUES (NULL, '$title', current_timestamp(), '$desc', '$aname', '$about');";
+    $sql="INSERT INTO `blog` (`bid`,`title`, `date`,`blogimg`, `des`, `a_name`,`a_img`, `a_about`) 
+    VALUES (NULL,'$title', current_timestamp(),'$filename', '$desc', '$aname','$filename1', '$about');";
       $result=mysqli_query($conn, $sql);
     //  image
         move_uploaded_file($tempname, $folder);
@@ -67,24 +67,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
 
 <body id="top " class="">
-    <div id="overlayer"></div>
-    <div class="loader">
-        <div class="spinner-border text-primary" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-
-
-    <div class="site-wrap">
-
-        <div class="site-mobile-menu site-navbar-target">
-            <div class="site-mobile-menu-header">
-                <div class="site-mobile-menu-close mt-3">
-                    <span class="icon-close2 js-menu-toggle"></span>
-                </div>
-            </div>
-            <div class="site-mobile-menu-body"></div>
-        </div>
         <!-- .site-mobile-menu -->
         <?php include'partials/_header.php';?>
         <!-- HOME -->
