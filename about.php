@@ -163,7 +163,7 @@
                     </div>
 
                     <div class="col-md-6 order-md-2 ml-md-auto">
-                        <img src="images/two.jpg" alt="Image" class="img-fluid mb-4 rounded">
+                        <img src="images/image.avif" alt="Image" class="img-fluid mb-4 rounded">
                     </div>
 
                     <div class="col-md-6 text-center">

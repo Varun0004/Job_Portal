@@ -169,7 +169,8 @@ if (isset($_SESSION['loggedin'])) {
                     $compname = $row['compname'];
                     echo '<ul class="job-listings mb-3">
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                <a href="./job-single.php?uid' . $uid . '&jobno='.$jobno.' "></a>
+                <a href="job-single.php?jobno='.$jobid.'';if($loggedin){echo'&uid='.$uid.'';} echo'"></a>           
+               
                 <div class="job-listing-logo ">
                 <img src="./images/' . $logo . '"  alt="" class="img-fluid" height="100px" width="100px">
                 </div>
@@ -226,7 +227,8 @@ if (isset($_SESSION['loggedin'])) {
                     $compname = $row['compname'];
                     echo '<ul class="job-listings mb-3">
                 <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                <a href="job-single.php?jobno='.$jobid.'';if($loggedin){echo'&uid='.$uid.'';} echo'"></a>                <div class="job-listing-logo ">
+                <a href="job-single.php?jobno='.$jobid.'';if($loggedin){echo'&uid='.$uid.'';} echo'"></a>           
+                     <div class="job-listing-logo ">
                 <img src="./images/' . $logo . '"  alt="" class="img-fluid" height="100px" width="100px">
                 </div>
                 <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
